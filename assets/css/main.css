@@ -1006,7 +1006,7 @@ section,
   font-weight: 800;
   color: rgba(0, 0, 0, 0.05);
   position: absolute;
-  top: -30px;
+  top: 27px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
