@@ -1,10 +1,4 @@
-/**
-* Template Name: DevFolio
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
@@ -249,3 +243,46 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+//-- Contact Form ---
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.php-email-form');
+  const loading = form.querySelector('.loading');
+  const error = form.querySelector('.error-message');
+  const success = form.querySelector('.sent-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Reset messages
+    loading.style.display = 'block';
+    error.style.display = 'none';
+    success.style.display = 'none';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      loading.style.display = 'none';
+
+      if (response.ok) {
+        success.style.display = 'block';
+        form.reset();
+      } else {
+        const data = await response.json();
+        error.style.display = 'block';
+        error.textContent = data.error || 'Oops! There was a problem.';
+      }
+    } catch (err) {
+      loading.style.display = 'none';
+      error.style.display = 'block';
+      error.textContent = 'Oops! There was a problem.';
+    }
+  });
+});
