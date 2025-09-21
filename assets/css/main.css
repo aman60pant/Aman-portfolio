@@ -91,75 +91,6 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Contact Form
---------------------------------------------------------------*/
-/* Container */
-.custom-contact-form {
-  max-width: 100%;
-  margin: 50px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  font-family: 'Arial', sans-serif;
-}
-
-/* Inputs */
-.ccf-input, .ccf-textarea {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.ccf-input:focus, .ccf-textarea:focus {
-  border-color: #2575fc;
-  box-shadow: 0 0 8px rgba(37,117,252,0.3);
-  outline: none;
-}
-
-/* Button */
-.ccf-button {
-  width: 100%;
-  padding: 12px;
-  background: #2575fc;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.ccf-button:hover {
-  background: #1a5fd6;
-  box-shadow: 0 4px 15px rgba(37,117,252,0.4);
-}
-
-/* Status messages */
-.ccf-status-group {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.ccf-loading, .ccf-error-message, .ccf-sent-message {
-  display: none;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.ccf-loading { color: #2575fc; }
-.ccf-error-message { color: #ff4c4c; }
-.ccf-sent-message { color: #28a745; }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .custom-contact-form { padding: 20px; }
-}
-
-/*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
@@ -970,11 +901,16 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-wrap {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+/* Container */
+.custom-contact-form {
+  max-width: 100%;
+  margin: 50px auto;
   padding: 30px;
-  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  font-family: 'Arial', sans-serif;
 }
 
 .contact .info-item i {
@@ -991,70 +927,59 @@ section,
   margin-right: 15px;
 }
 
-.contact .info-item h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 2px 0;
+/* Inputs */
+.ccf-input, .ccf-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
+.ccf-input:focus, .ccf-textarea:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37,117,252,0.3);
+  outline: none;
 }
 
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+/* Button */
+.ccf-button {
+  width: 100%;
+  padding: 12px;
+  background: #2575fc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+.ccf-button:hover {
+  background: #1a5fd6;
+  box-shadow: 0 4px 15px rgba(37,117,252,0.4);
 }
 
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
+/* Status messages */
+.ccf-status-group {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+.ccf-loading, .ccf-error-message, .ccf-sent-message {
+  display: none;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
+.ccf-loading { color: #2575fc; }
+.ccf-error-message { color: #ff4c4c; }
+.ccf-sent-message { color: #28a745; }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+/* Responsive */
+@media (max-width: 600px) {
+  .custom-contact-form { padding: 20px; }
 }
 
 /*--------------------------------------------------------------
@@ -1233,10 +1158,3 @@ section,
 }
 
 
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
