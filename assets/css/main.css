@@ -927,6 +927,11 @@ section,
   margin-right: 15px;
 }
 
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
 /* Inputs */
 .ccf-input, .ccf-textarea {
   width: 100%;
