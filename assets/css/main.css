@@ -809,6 +809,26 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.resume-btn-container {
+  text-align: center;
+}
+
+.resume-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+  display: inline-block; /* Important for centering */
+  margin: 24px 0;
+}
+
+.resume-btn:hover {
+  background: #0056b3;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
