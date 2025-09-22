@@ -1071,6 +1071,9 @@ section,
 
 
 /* 🌟 Projects Section */
+#projects-section {
+  background-color: #fff6fa !important;
+}
 
 .portfolio-container {
   display: flex;
